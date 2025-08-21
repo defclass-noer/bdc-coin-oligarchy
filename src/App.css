@@ -3,6 +3,7 @@ body, html, #root {
   margin: 0;
   padding: 0;
   height: 100%;
+  background: transparent;
 }
 
 /* Container utama */
@@ -23,14 +24,17 @@ body, html, #root {
   text-align: center;
   padding: 15px;
   font-weight: bold;
-  z-index: 1000;
+  z-index: 1000; /* supaya di atas matrix rain */
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Konten */
 .content {
   flex: 1;
-  padding: 100px 20px 80px; /* padding atas & bawah biar tidak tertutup header/footer */
+  padding: 100px 20px 80px; /* biar tidak ketutup header/footer */
+  position: relative;
+  z-index: 10; /* di atas matrix rain */
+  color: #fff; /* biar kontras dengan background */
 }
 
 /* Footer */
@@ -45,4 +49,5 @@ body, html, #root {
   padding: 10px;
   font-size: 14px;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
-  }
+  z-index: 1000; /* di atas matrix rain */
+}
